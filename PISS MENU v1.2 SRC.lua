@@ -1,4 +1,4 @@
-﻿local Players = game:GetService("Players")
+local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
 local Camera = workspace.CurrentCamera
@@ -59,7 +59,6 @@ end
 -- Function to send chat message
 local function sendMessage(msg)
     if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
-        clearChat(2)
         TextChatService.TextChannels.RBXGeneral:SendAsync(msg)
     else
         StarterGui:SetCore("SendNotification", {
